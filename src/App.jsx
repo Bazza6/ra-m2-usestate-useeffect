@@ -13,11 +13,20 @@ function App() {
   const [circleColor, setCircleColor] = useState("#8FBC8F");
 
   useEffect(() => {
-    triangleSize === 130 &&
-      squareSize === 130 &&
-      circleSize === 130 &&
+    triangleSize === squareSize &&
+      squareSize === circleSize &&
       alert("todas las figuras tienen el mismo tamaño");
-  }, [triangleSize, squareSize, circleSize]);
+    triangleColor === squareColor &&
+      squareColor === circleColor &&
+      alert("todas las figuras tienen el mismo color");
+  }, [
+    triangleSize,
+    squareSize,
+    circleSize,
+    triangleColor,
+    squareColor,
+    circleColor,
+  ]);
 
   return (
     <div>
