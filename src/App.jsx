@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import Square from "./components/organism/Square";
-import Triangle from "./components/organism/Triangle";
-import Circle from "./components/organism/Circle";
-import Title from "./components/atoms/Title/Title";
+import { Title } from "./components/atoms";
+import { Square, Circle, Triangle } from "./components/organism";
 
-function App() {
+const App = () => {
   const [triangleSize, setTriangleSize] = useState(129);
   const [triangleColor, setTriangleColor] = useState("#ff8000");
   const [squareSize, setSquareSize] = useState(130);
@@ -29,7 +27,7 @@ function App() {
   ]);
 
   return (
-    <div>
+    <>
       <Title>Ejercicio useState useEffect</Title>
       <Triangle
         triangleSize={triangleSize}
@@ -49,8 +47,8 @@ function App() {
         circleColor={circleColor}
         setCircleColor={setCircleColor}
       />
-    </div>
+    </>
   );
-}
+};
 
 export default App;
