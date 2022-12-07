@@ -1,5 +1,5 @@
-import { TriangleSvg } from "../atoms";
-import { InputNumber, InputColor } from "../molecules";
+import { TriangleSvg } from '../atoms'
+import { InputNumber, InputColor } from '../molecules'
 
 export const Triangle = ({
   triangleSize,
@@ -9,19 +9,19 @@ export const Triangle = ({
 }) => {
   return (
     <>
-      <div style={{ display: "block", marginBottom: "8px" }}>
+      <div style={{ display: 'block', marginBottom: '8px' }}>
         <InputNumber
-          id="triangleNumber"
+          id='triangleNumber'
           sizeValue={triangleSize}
           onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
         />
         <InputColor
-          id="triangleColor"
+          id='triangleColor'
           colorValue={triangleColor}
           onChangeColor={(e) => setTriangleColor(e.target.value)}
         />
       </div>
       <TriangleSvg triangleSize={triangleSize} triangleColor={triangleColor} />
     </>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-import { SquareSvg } from "../atoms";
-import { InputNumber, InputColor } from "../molecules";
+import { SquareSvg } from '../atoms'
+import { InputNumber, InputColor } from '../molecules'
 
 export const Square = ({
   squareSize,
@@ -9,19 +9,19 @@ export const Square = ({
 }) => {
   return (
     <>
-      <div style={{ display: "block", marginBottom: "8px" }}>
+      <div style={{ display: 'block', marginBottom: '8px' }}>
         <InputNumber
-          id="squareNumber"
+          id='squareNumber'
           sizeValue={squareSize}
           onChangeSize={(e) => setSquareSize(Number(e.target.value))}
         />
         <InputColor
-          id="squareColor"
+          id='squareColor'
           colorValue={squareColor}
           onChangeColor={(e) => setSquareColor(e.target.value)}
         />
       </div>
       <SquareSvg squareSize={squareSize} squareColor={squareColor} />
     </>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-import { CircleSvg } from "../atoms";
-import { InputNumber, InputColor } from "../molecules";
+import { CircleSvg } from '../atoms'
+import { InputNumber, InputColor } from '../molecules'
 
 export const Circle = ({
   circleSize,
@@ -9,21 +9,21 @@ export const Circle = ({
 }) => {
   return (
     <>
-      <div style={{ display: "block", marginBottom: "8px" }}>
+      <div style={{ display: 'block', marginBottom: '8px' }}>
         <InputNumber
-          id="circleNumber"
+          id='circleNumber'
           sizeValue={circleSize}
           onChangeSize={(e) => setCircleSize(Number(e.target.value))}
         />
         <InputColor
-          id="circleColor"
+          id='circleColor'
           colorValue={circleColor}
           onChangeColor={(e) => {
-            setCircleColor(e.target.value);
+            setCircleColor(e.target.value)
           }}
         />
       </div>
       <CircleSvg circleSize={circleSize} circleColor={circleColor} />
     </>
-  );
-};
+  )
+}

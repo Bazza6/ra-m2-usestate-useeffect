@@ -1,2 +1,2 @@
-export * from "./InputColor";
-export * from "./InputNumber";
+export * from "./InputColor"
+export * from "./InputNumber"

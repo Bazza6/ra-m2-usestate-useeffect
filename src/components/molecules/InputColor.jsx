@@ -1,4 +1,4 @@
-import { Label } from "../atoms";
+import { Label } from '../atoms'
 
 export const InputColor = ({ id, colorValue, onChangeColor }) => {
   return (
@@ -7,10 +7,10 @@ export const InputColor = ({ id, colorValue, onChangeColor }) => {
       <input
         name={id}
         id={id}
-        type="color"
+        type='color'
         value={colorValue}
         onChange={onChangeColor}
       />
     </Label>
-  );
-};
+  )
+}
