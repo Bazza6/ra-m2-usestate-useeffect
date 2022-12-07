@@ -1,6 +1,6 @@
 import { Label } from "../atoms";
 
-export const InputNumber = ({ id, sizeValue, onChangeSize, children }) => {
+export const InputNumber = ({ id, sizeValue, onChangeSize }) => {
   return (
     <Label htmlFor={id}>
       size:

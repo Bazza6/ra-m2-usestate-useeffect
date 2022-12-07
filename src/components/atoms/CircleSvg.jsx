@@ -1,5 +1,6 @@
-export const CircleSvg = ({ circleSize, circleColor }) => {
-  // poner valores por defecto
+import PropTypes from "prop-types";
+
+export const CircleSvg = ({ circleSize = 101, circleColor = "#99ff99" }) => {
   return (
     <svg width={`${circleSize}px`} height={`${circleSize}px`}>
       <circle
@@ -10,4 +11,9 @@ export const CircleSvg = ({ circleSize, circleColor }) => {
       />
     </svg>
   );
+};
+
+CircleSvg.propTypes = {
+  circleSize: PropTypes.number,
+  circleColor: PropTypes.string,
 };

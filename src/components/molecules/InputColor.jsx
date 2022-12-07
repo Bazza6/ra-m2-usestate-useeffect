@@ -1,6 +1,6 @@
 import { Label } from "../atoms";
 
-export const InputColor = ({ id, colorValue, onChangeColor, children }) => {
+export const InputColor = ({ id, colorValue, onChangeColor }) => {
   return (
     <Label htmlFor={id}>
       color:

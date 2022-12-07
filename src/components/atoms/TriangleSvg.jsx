@@ -1,5 +1,9 @@
-export const TriangleSVg = ({ triangleSize, triangleColor }) => {
-  // poner valores por defecto
+import PropTypes from "prop-types";
+
+export const TriangleSvg = ({
+  triangleSize = 99,
+  triangleColor = "#99ccff",
+}) => {
   return (
     <svg width={`${triangleSize}px`} height={`${triangleSize}px`}>
       <polygon
@@ -9,4 +13,9 @@ export const TriangleSVg = ({ triangleSize, triangleColor }) => {
       />
     </svg>
   );
+};
+
+TriangleSvg.propTypes = {
+  triangleSize: PropTypes.number,
+  triangleColor: PropTypes.string,
 };

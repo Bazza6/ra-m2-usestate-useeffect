@@ -11,12 +11,12 @@ export const Square = ({
     <>
       <div style={{ display: "block", marginBottom: "8px" }}>
         <InputNumber
-          id="square"
+          id="squareNumber"
           sizeValue={squareSize}
           onChangeSize={(e) => setSquareSize(Number(e.target.value))}
         />
         <InputColor
-          id="square"
+          id="squareColor"
           colorValue={squareColor}
           onChangeColor={(e) => setSquareColor(e.target.value)}
         />
