@@ -1,24 +1,27 @@
-import InputField from "../molecules/InputField";
+import { SquareSvg } from "../atoms";
+import { InputNumber, InputColor } from "../molecules";
 
-function Square({ squareSize, setSquareSize, squareColor, setSquareColor }) {
+export const Square = ({
+  squareSize,
+  setSquareSize,
+  squareColor,
+  setSquareColor,
+}) => {
   return (
-    <div style={{ margin: "16px" }}>
-      <InputField
-        sizeValue={squareSize}
-        onChangeSize={(e) => setSquareSize(Number(e.target.value))}
-        colorValue={squareColor}
-        onChangeColor={(e) => setSquareColor(e.target.value)}
-      />
-      <div
-        style={{
-          marginTop: "10px",
-          height: `${squareSize}px`,
-          width: `${squareSize}px`,
-          backgroundColor: squareColor,
-        }}
-      ></div>
-    </div>
+    <>
+      <div style={{ display: "block", marginBottom: "8px" }}>
+        <InputNumber
+          id="squareNumber"
+          sizeValue={squareSize}
+          onChangeSize={(e) => setSquareSize(Number(e.target.value))}
+        />
+        <InputColor
+          id="squareColor"
+          colorValue={squareColor}
+          onChangeColor={(e) => setSquareColor(e.target.value)}
+        />
+      </div>
+      <SquareSvg squareSize={squareSize} squareColor={squareColor} />
+    </>
   );
-}
-
-export default Square;
+};

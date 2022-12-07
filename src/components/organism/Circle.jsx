@@ -1,26 +1,29 @@
-import InputField from "../molecules/InputField";
+import { CircleSvg } from "../atoms";
+import { InputNumber, InputColor } from "../molecules";
 
-function Circle({ circleSize, setCircleSize, circleColor, setCircleColor }) {
+export const Circle = ({
+  circleSize,
+  setCircleSize,
+  circleColor,
+  setCircleColor,
+}) => {
   return (
-    <div style={{ margin: "16px" }}>
-      <InputField
-        sizeValue={circleSize}
-        onChangeSize={(e) => setCircleSize(Number(e.target.value))}
-        colorValue={circleColor}
-        onChangeColor={(e) => setCircleColor(e.target.value)}
-      />
-      <div
-        style={{
-          marginTop: "10px",
-          height: `${circleSize}px`,
-          width: `${circleSize}px`,
-          backgroundColor: circleColor,
-          borderRadius: "50%",
-          display: "inline-block",
-        }}
-      ></div>
-    </div>
+    <>
+      <div style={{ display: "block", marginBottom: "8px" }}>
+        <InputNumber
+          id="circleNumber"
+          sizeValue={circleSize}
+          onChangeSize={(e) => setCircleSize(Number(e.target.value))}
+        />
+        <InputColor
+          id="circleColor"
+          colorValue={circleColor}
+          onChangeColor={(e) => {
+            setCircleColor(e.target.value);
+          }}
+        />
+      </div>
+      <CircleSvg circleSize={circleSize} circleColor={circleColor} />
+    </>
   );
-}
-
-export default Circle;
+};

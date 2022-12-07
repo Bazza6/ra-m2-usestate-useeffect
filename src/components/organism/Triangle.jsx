@@ -1,32 +1,27 @@
-import InputField from "../molecules/InputField";
+import { TriangleSvg } from "../atoms";
+import { InputNumber, InputColor } from "../molecules";
 
-function Triangle({
+export const Triangle = ({
   triangleSize,
   triangleColor,
   setTriangleSize,
   setTriangleColor,
-}) {
+}) => {
   return (
-    <div style={{ margin: "16px" }}>
-      <InputField
-        sizeValue={triangleSize}
-        onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
-        colorValue={triangleColor}
-        onChangeColor={(e) => setTriangleColor(e.target.value)}
-      />
-
-      <div
-        style={{
-          marginTop: "10px",
-          width: "0",
-          height: "0",
-          borderLeft: `${triangleSize / 2}px solid transparent`,
-          borderRight: `${triangleSize / 2}px solid transparent`,
-          borderBottom: `${triangleSize}px solid ${triangleColor}`,
-        }}
-      ></div>
-    </div>
+    <>
+      <div style={{ display: "block", marginBottom: "8px" }}>
+        <InputNumber
+          id="triangleNumber"
+          sizeValue={triangleSize}
+          onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
+        />
+        <InputColor
+          id="triangleColor"
+          colorValue={triangleColor}
+          onChangeColor={(e) => setTriangleColor(e.target.value)}
+        />
+      </div>
+      <TriangleSvg triangleSize={triangleSize} triangleColor={triangleColor} />
+    </>
   );
-}
-
-export default Triangle;
+};
