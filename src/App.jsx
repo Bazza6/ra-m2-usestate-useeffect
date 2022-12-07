@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
-import { Title } from "./components/atoms";
-import { Square, Circle, Triangle } from "./components/organism";
+import { useEffect, useState } from 'react'
+import { Title } from './components/atoms'
+import { Square, Circle, Triangle } from './components/organism'
 
 const App = () => {
-  const [triangleSize, setTriangleSize] = useState(129);
-  const [triangleColor, setTriangleColor] = useState("#ff8000");
-  const [squareSize, setSquareSize] = useState(130);
-  const [squareColor, setSquareColor] = useState("#6495ED");
-  const [circleSize, setCircleSize] = useState(131);
-  const [circleColor, setCircleColor] = useState("#8FBC8F");
+  const [triangleSize, setTriangleSize] = useState(129)
+  const [triangleColor, setTriangleColor] = useState('#ff8000')
+  const [squareSize, setSquareSize] = useState(130)
+  const [squareColor, setSquareColor] = useState('#6495ED')
+  const [circleSize, setCircleSize] = useState(131)
+  const [circleColor, setCircleColor] = useState('#8FBC8F')
 
   useEffect(() => {
     triangleSize === squareSize &&
       squareSize === circleSize &&
-      alert("todas las figuras tienen el mismo tamaño");
+      alert('todas las figuras tienen el mismo tamaño')
     triangleColor === squareColor &&
       squareColor === circleColor &&
-      alert("todas las figuras tienen el mismo color");
+      alert('todas las figuras tienen el mismo color')
   }, [
     triangleSize,
     squareSize,
@@ -24,7 +24,7 @@ const App = () => {
     triangleColor,
     squareColor,
     circleColor,
-  ]);
+  ])
 
   return (
     <>
@@ -48,7 +48,7 @@ const App = () => {
         setCircleColor={setCircleColor}
       />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

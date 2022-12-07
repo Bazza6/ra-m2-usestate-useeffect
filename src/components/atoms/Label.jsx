@@ -1,6 +1,6 @@
-import React from "react";
-import { colors } from "../../styles/colors";
-import { dimensiones } from "../../styles/dimensions";
+import React from 'react'
+import { colors } from '../../styles/colors'
+import { dimensiones } from '../../styles/dimensions'
 
 export const Label = ({
   children,
@@ -12,5 +12,5 @@ export const Label = ({
     <label style={{ color, fontSize }} htmlFor={htmlFor}>
       {children}
     </label>
-  );
-};
+  )
+}

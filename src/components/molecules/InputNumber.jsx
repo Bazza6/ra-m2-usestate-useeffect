@@ -1,4 +1,4 @@
-import { Label } from "../atoms";
+import { Label } from '../atoms'
 
 export const InputNumber = ({ id, sizeValue, onChangeSize }) => {
   return (
@@ -7,11 +7,11 @@ export const InputNumber = ({ id, sizeValue, onChangeSize }) => {
       <input
         name={id}
         id={id}
-        style={{ width: "48px" }}
-        type="number"
+        style={{ width: '48px' }}
+        type='number'
         value={sizeValue}
         onChange={onChangeSize}
       />
     </Label>
-  );
-};
+  )
+}
