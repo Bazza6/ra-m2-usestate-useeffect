@@ -3,6 +3,7 @@ import { Label } from '../atoms'
 
 export const InputNumber = ({
   id,
+  name,
   numberValue,
   onChangeNumber = () => {},
   children,
@@ -11,7 +12,7 @@ export const InputNumber = ({
     <Label htmlFor={id}>
       {children}
       <input
-        name={id}
+        name={name}
         id={id}
         style={{ width: '48px' }}
         type='number'
@@ -24,6 +25,7 @@ export const InputNumber = ({
 
 InputNumber.propTypes = {
   id: PropTypes.string,
+  name: PropTypes.string,
   numberValue: PropTypes.number,
   onChangeNumber: PropTypes.func,
   children: PropTypes.node,

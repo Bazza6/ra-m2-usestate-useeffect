@@ -13,6 +13,7 @@ export const Square = ({
       <div style={{ display: 'block', marginBottom: '8px' }}>
         <InputNumber
           id='squareNumber'
+          name='squareNumber'
           numberValue={squareSize}
           onChangeNumber={(e) => setSquareSize(Number(e.target.value))}
         >
@@ -20,6 +21,7 @@ export const Square = ({
         </InputNumber>
         <InputColor
           id='squareColor'
+          name='squareColor'
           colorValue={squareColor}
           onChangeColor={(e) => setSquareColor(e.target.value)}
         >
