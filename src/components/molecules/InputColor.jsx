@@ -1,9 +1,15 @@
+import PropTypes from 'prop-types'
 import { Label } from '../atoms'
 
-export const InputColor = ({ id, colorValue, onChangeColor }) => {
+export const InputColor = ({
+  id,
+  colorValue,
+  onChangeColor = () => {},
+  children,
+}) => {
   return (
     <Label htmlFor={id}>
-      color:
+      {children}
       <input
         name={id}
         id={id}
@@ -13,4 +19,11 @@ export const InputColor = ({ id, colorValue, onChangeColor }) => {
       />
     </Label>
   )
+}
+
+InputColor.propTypes = {
+  id: PropTypes.string,
+  colorValue: PropTypes.string,
+  onChangeColor: PropTypes.func,
+  children: PropTypes.node,
 }

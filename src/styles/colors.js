@@ -4,5 +4,5 @@ export const colors = {
     font: {
         base: "#333",
         headings: "#111",
-    }
+    },
 }
