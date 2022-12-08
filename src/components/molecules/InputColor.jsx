@@ -3,6 +3,7 @@ import { Label } from '../atoms'
 
 export const InputColor = ({
   id,
+  name,
   colorValue,
   onChangeColor = () => {},
   children,
@@ -11,7 +12,7 @@ export const InputColor = ({
     <Label htmlFor={id}>
       {children}
       <input
-        name={id}
+        name={name}
         id={id}
         type='color'
         value={colorValue}
@@ -23,6 +24,7 @@ export const InputColor = ({
 
 InputColor.propTypes = {
   id: PropTypes.string,
+  name: PropTypes.string,
   colorValue: PropTypes.string,
   onChangeColor: PropTypes.func,
   children: PropTypes.node,

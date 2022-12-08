@@ -13,6 +13,7 @@ export const Triangle = ({
       <div style={{ display: 'block', marginBottom: '8px' }}>
         <InputNumber
           id='triangleNumber'
+          name='triangleNumber'
           numberValue={triangleSize}
           onChangeNumber={(e) => setTriangleSize(Number(e.target.value))}
         >
@@ -20,6 +21,7 @@ export const Triangle = ({
         </InputNumber>
         <InputColor
           id='triangleColor'
+          name='triangleColor'
           colorValue={triangleColor}
           onChangeColor={(e) => setTriangleColor(e.target.value)}
         >

@@ -13,6 +13,7 @@ export const Circle = ({
       <div style={{ display: 'block', marginBottom: '8px' }}>
         <InputNumber
           id='circleNumber'
+          name='circleNumber'
           numberValue={circleSize}
           onChangeNumber={(e) => setCircleSize(Number(e.target.value))}
         >
@@ -20,6 +21,7 @@ export const Circle = ({
         </InputNumber>
         <InputColor
           id='circleColor'
+          name='circleColor'
           colorValue={circleColor}
           onChangeColor={(e) => {
             setCircleColor(e.target.value)
