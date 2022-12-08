@@ -1,4 +1,3 @@
-import React from 'react'
 import { colors } from '../../styles/colors'
 import { dimensiones } from '../../styles/dimensions'
 
