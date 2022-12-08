@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { colors } from '../../styles/colors'
 import { dimensiones } from '../../styles/dimensions'
 
@@ -12,4 +13,11 @@ export const Label = ({
       {children}
     </label>
   )
+}
+
+Label.propTypes = {
+  children: PropTypes.node,
+  color: PropTypes.string,
+  fontSize: PropTypes.string,
+  htmlFor: PropTypes.string,
 }

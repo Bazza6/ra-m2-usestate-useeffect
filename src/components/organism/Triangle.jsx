@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { TriangleSvg } from '../atoms'
 import { InputNumber, InputColor } from '../molecules'
 
@@ -12,16 +13,27 @@ export const Triangle = ({
       <div style={{ display: 'block', marginBottom: '8px' }}>
         <InputNumber
           id='triangleNumber'
-          sizeValue={triangleSize}
-          onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
-        />
+          numberValue={triangleSize}
+          onChangeNumber={(e) => setTriangleSize(Number(e.target.value))}
+        >
+          Tamaño:
+        </InputNumber>
         <InputColor
           id='triangleColor'
           colorValue={triangleColor}
           onChangeColor={(e) => setTriangleColor(e.target.value)}
-        />
+        >
+          Color:
+        </InputColor>
       </div>
       <TriangleSvg triangleSize={triangleSize} triangleColor={triangleColor} />
     </>
   )
+}
+
+Triangle.propTypes = {
+  triangleSize: PropTypes.number,
+  triangleColor: PropTypes.string,
+  setTriangleSize: PropTypes.func.isRequired,
+  setTriangleColor: PropTypes.func.isRequired,
 }

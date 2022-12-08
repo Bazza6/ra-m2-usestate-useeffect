@@ -5,5 +5,5 @@ export const dimensiones = {
     font: {
         base: "16px",
         h1: "32px",
-    }
+    },
 } 
